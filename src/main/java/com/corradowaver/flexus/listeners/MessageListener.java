@@ -1,8 +1,11 @@
 package com.corradowaver.flexus.listeners;
 
 import com.corradowaver.flexus.GuildGirlBot;
+import com.corradowaver.flexus.commands.handlers.PingHandler;
+import com.corradowaver.flexus.commands.handlers.image.ImageSearchEngine;
 import com.corradowaver.flexus.commands.handlers.InfoHandler;
 import com.corradowaver.flexus.commands.handlers.PrefixHandler;
+import com.corradowaver.flexus.commands.handlers.image.ImageSearchHandler;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
@@ -19,7 +22,8 @@ public class MessageListener extends ListenerAdapter {
       switch (command) {
         case INFO -> new InfoHandler(event);
         case PREFIX -> new PrefixHandler(event, args);
-
+        case SEND -> new ImageSearchHandler(event, args);
+        case PING -> new PingHandler(event);
         default -> {
         }
       }

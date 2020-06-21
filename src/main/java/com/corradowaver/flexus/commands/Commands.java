@@ -6,8 +6,8 @@ package com.corradowaver.flexus.commands;
 public class Commands {
   public static final String INFO = "info";
   public static final String PREFIX = "prefix";
-  public static final String PLAY = "play";
-  public static final String PAUSE = "pause";
+  public static final String SEND = "send";
+  public static final String PING = "ping";
 
   private Commands() {
 

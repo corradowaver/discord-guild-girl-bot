@@ -14,8 +14,8 @@ repositories {
 
 dependencies {
     compile 'net.dv8tion:JDA:4.1.1_101'
-    // https://mvnrepository.com/artifact/com.sedmelluq/lavaplayer
-    compile group: 'com.sedmelluq', name: 'lavaplayer', version: '1.3.7'
+
+    implementation 'com.google.code.gson:gson:2.8.6'
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
