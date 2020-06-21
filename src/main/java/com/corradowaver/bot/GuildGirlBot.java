@@ -1,5 +1,6 @@
 package com.corradowaver.bot;
 
+import com.corradowaver.bot.config.PropsManager;
 import com.corradowaver.bot.listeners.GuildJoinListener;
 import com.corradowaver.bot.listeners.MessageListener;
 import net.dv8tion.jda.api.AccountType;
@@ -12,14 +13,15 @@ import javax.security.auth.login.LoginException;
 
 public class GuildGirlBot {
 
-  private static final String TOKEN = "NzE4MTI3NzA1MzU0NDAzOTAx.Xtkbfw.DICaQRnmBF1wBZEJJr_puve3Wck";
-
   private static JDA jda;
 
   private static String prefix = "!";
 
   public static void main(String[] args) throws LoginException {
-    jda = new JDABuilder(AccountType.BOT).setToken(TOKEN).build();
+
+    final String token = PropsManager.getProps().getProperty("discord.bot.token");
+
+    jda = new JDABuilder(AccountType.BOT).setToken(token).build();
     jda.getPresence().setStatus(OnlineStatus.ONLINE);
     jda.getPresence().setActivity(Activity.listening("lofi radio"));
     jda.addEventListener(new MessageListener());
