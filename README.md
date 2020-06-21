@@ -1,5 +1,7 @@
 # Guild Girl 
-### Discord Bot built using [JDA](https://github.com/DV8FromTheWorld/JDA)
+### Discord Bot built using [JDA](https://github.com/DV8FromTheWorld/JDA)  
+Java 14  
+Gradle 6.5
 
 Configure your main/resources/application.properties  
 ```
