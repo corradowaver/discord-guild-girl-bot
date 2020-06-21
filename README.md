@@ -1,5 +1,5 @@
 # Guild Girl 
-## Discord Bot
+### Discord Bot built using [JDA](https://github.com/DV8FromTheWorld/JDA)
 
 Configure your main/resources/application.properties  
 ```
