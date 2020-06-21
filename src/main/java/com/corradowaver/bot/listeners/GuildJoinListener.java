@@ -1,4 +1,4 @@
-package com.corradowaver.flexus.listeners;
+package com.corradowaver.bot.listeners;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;

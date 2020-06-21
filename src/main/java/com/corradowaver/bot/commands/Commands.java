@@ -1,4 +1,4 @@
-package com.corradowaver.flexus.commands;
+package com.corradowaver.bot.commands;
 
 /*
   Class holds commands as static constants

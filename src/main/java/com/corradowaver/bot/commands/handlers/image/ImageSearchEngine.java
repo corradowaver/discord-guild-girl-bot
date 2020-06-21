@@ -1,4 +1,4 @@
-package com.corradowaver.flexus.commands.handlers.image;
+package com.corradowaver.bot.commands.handlers.image;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

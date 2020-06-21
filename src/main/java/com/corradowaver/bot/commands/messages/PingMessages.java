@@ -1,14 +1,9 @@
-package com.corradowaver.flexus.commands.messages;
+package com.corradowaver.bot.commands.messages;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
-import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 import java.awt.*;
-import java.time.LocalDateTime;
-import java.time.OffsetDateTime;
-import java.util.Date;
-import java.util.Objects;
 
 /*
   Class holds pre-built MessageEmbed response for ping command.

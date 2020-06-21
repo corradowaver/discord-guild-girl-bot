@@ -1,7 +1,7 @@
-package com.corradowaver.flexus.commands.handlers;
+package com.corradowaver.bot.commands.handlers;
 
-import com.corradowaver.flexus.GuildGirlBot;
-import com.corradowaver.flexus.commands.messages.PrefixMessages;
+import com.corradowaver.bot.GuildGirlBot;
+import com.corradowaver.bot.commands.messages.PrefixMessages;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 /*

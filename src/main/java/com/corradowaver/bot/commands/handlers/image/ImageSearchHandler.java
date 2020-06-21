@@ -1,11 +1,9 @@
-package com.corradowaver.flexus.commands.handlers.image;
+package com.corradowaver.bot.commands.handlers.image;
 
-import com.corradowaver.flexus.commands.messages.ImageMessages;
-import com.corradowaver.flexus.commands.messages.InfoMessages;
+import com.corradowaver.bot.commands.messages.ImageMessages;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
-import java.awt.*;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 

@@ -1,7 +1,7 @@
-package com.corradowaver.flexus;
+package com.corradowaver.bot;
 
-import com.corradowaver.flexus.listeners.GuildJoinListener;
-import com.corradowaver.flexus.listeners.MessageListener;
+import com.corradowaver.bot.listeners.GuildJoinListener;
+import com.corradowaver.bot.listeners.MessageListener;
 import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;

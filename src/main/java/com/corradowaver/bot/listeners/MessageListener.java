@@ -1,15 +1,14 @@
-package com.corradowaver.flexus.listeners;
+package com.corradowaver.bot.listeners;
 
-import com.corradowaver.flexus.GuildGirlBot;
-import com.corradowaver.flexus.commands.handlers.PingHandler;
-import com.corradowaver.flexus.commands.handlers.image.ImageSearchEngine;
-import com.corradowaver.flexus.commands.handlers.InfoHandler;
-import com.corradowaver.flexus.commands.handlers.PrefixHandler;
-import com.corradowaver.flexus.commands.handlers.image.ImageSearchHandler;
+import com.corradowaver.bot.GuildGirlBot;
+import com.corradowaver.bot.commands.handlers.PingHandler;
+import com.corradowaver.bot.commands.handlers.InfoHandler;
+import com.corradowaver.bot.commands.handlers.PrefixHandler;
+import com.corradowaver.bot.commands.handlers.image.ImageSearchHandler;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
-import static com.corradowaver.flexus.commands.Commands.*;
+import static com.corradowaver.bot.commands.Commands.*;
 
 public class MessageListener extends ListenerAdapter {
 

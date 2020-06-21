@@ -1,13 +1,11 @@
-package com.corradowaver.flexus.commands.messages;
+package com.corradowaver.bot.commands.messages;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 import java.awt.*;
-import java.util.Arrays;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 /*
   Class holds pre-built MessageEmbed response for info command.

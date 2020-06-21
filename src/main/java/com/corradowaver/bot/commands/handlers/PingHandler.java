@@ -1,7 +1,6 @@
-package com.corradowaver.flexus.commands.handlers;
+package com.corradowaver.bot.commands.handlers;
 
-import com.corradowaver.flexus.commands.messages.InfoMessages;
-import com.corradowaver.flexus.commands.messages.PingMessages;
+import com.corradowaver.bot.commands.messages.PingMessages;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 import java.time.OffsetDateTime;

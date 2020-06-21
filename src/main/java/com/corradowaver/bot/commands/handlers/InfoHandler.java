@@ -1,6 +1,6 @@
-package com.corradowaver.flexus.commands.handlers;
+package com.corradowaver.bot.commands.handlers;
 
-import com.corradowaver.flexus.commands.messages.InfoMessages;
+import com.corradowaver.bot.commands.messages.InfoMessages;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 /*
