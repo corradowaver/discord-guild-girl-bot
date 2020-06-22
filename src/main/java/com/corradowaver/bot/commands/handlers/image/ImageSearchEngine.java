@@ -48,12 +48,14 @@ public class ImageSearchEngine {
 
     stream.close();
     JsonObject json = JsonParser.parseString(results.jsonResponse).getAsJsonObject();
-    //get the first image result from the JSON object, along with the total
+    //get the random image result from the JSON object, along with the total
     //number of images returned by the Bing Image Search API.
     JsonArray jsonResults = json.getAsJsonArray("value");
     int randomNumber = ThreadLocalRandom.current().nextInt(0, jsonResults.size());
     JsonObject random_result = (JsonObject) jsonResults.get(randomNumber);
-    
+
+    System.out.println(random_result.get("name").getAsString());
+
     return new ImageBody(
         random_result.get("name").getAsString(),
         random_result.get("thumbnailUrl").getAsString());
