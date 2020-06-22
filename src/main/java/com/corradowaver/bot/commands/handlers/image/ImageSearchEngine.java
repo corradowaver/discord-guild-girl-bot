@@ -54,8 +54,6 @@ public class ImageSearchEngine {
     int randomNumber = ThreadLocalRandom.current().nextInt(0, jsonResults.size());
     JsonObject random_result = (JsonObject) jsonResults.get(randomNumber);
 
-    System.out.println(random_result.get("name").getAsString());
-
     return new ImageBody(
         random_result.get("name").getAsString(),
         random_result.get("thumbnailUrl").getAsString());

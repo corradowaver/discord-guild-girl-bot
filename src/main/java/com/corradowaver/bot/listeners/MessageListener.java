@@ -1,8 +1,8 @@
 package com.corradowaver.bot.listeners;
 
 import com.corradowaver.bot.GuildGirlBot;
-import com.corradowaver.bot.commands.handlers.PingHandler;
 import com.corradowaver.bot.commands.handlers.InfoHandler;
+import com.corradowaver.bot.commands.handlers.PingHandler;
 import com.corradowaver.bot.commands.handlers.PrefixHandler;
 import com.corradowaver.bot.commands.handlers.bitcoin.BitcoinHandler;
 import com.corradowaver.bot.commands.handlers.image.ImageSearchHandler;

@@ -1,7 +1,5 @@
 package com.corradowaver.bot.commands.handlers.image;
 
-import java.nio.charset.StandardCharsets;
-
 public class ImageBody {
   private String name;
   private String URL;
