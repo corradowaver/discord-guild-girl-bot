@@ -16,7 +16,9 @@ public class InfoMessages {
   private static final String[] COMMANDS_LIST = {
       "`info`   - info",
       "`prefix` - change prefix",
-      "`send`   - send picture"
+      "`send`   - send picture",
+      "`btc`    - current bitcoin rates",
+      "`ping`   - server latency"
   };
 
   private InfoMessages() {
