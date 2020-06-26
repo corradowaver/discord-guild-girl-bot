@@ -33,6 +33,6 @@ public class GuildGirlBot {
   }
 
   public static void setPrefix(String prefix) {
-    GuildGirlBot.prefix = prefix;
+    GuildGirlBot.prefix = prefix.toLowerCase();
   }
 }
