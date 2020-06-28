@@ -8,6 +8,10 @@ import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
+/*
+  Converts input string to ASCII text art.
+  FONT and STRING_MAX_LENGTH are related quantities.
+ */
 public class ArtHandler {
   private static final String FONT = "doom";
   private static final int STRING_MAX_LENGTH = 62;
