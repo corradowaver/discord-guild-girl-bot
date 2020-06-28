@@ -1,6 +1,7 @@
 package com.corradowaver.bot.commands.handlers.art;
 
 import com.corradowaver.bot.commands.messages.ArtMessages;
+import com.corradowaver.bot.commands.services.art.ArtService;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
@@ -22,7 +23,7 @@ public class ArtHandler {
     if (args.length > 1) {
       String text = Arrays.stream(args).skip(1).collect(Collectors.joining("+"));
       try {
-        String art = ArtSearchEngine.getAsciiArt(text, FONT);
+        String art = ArtService.getAsciiArt(text, FONT);
         if (isValidForOutput(art)) {
           response = ArtMessages.getMessage(event, art);
         } else {

@@ -1,6 +1,7 @@
 package com.corradowaver.bot.commands.handlers.bitcoin;
 
 import com.corradowaver.bot.commands.messages.BitcoinMessages;
+import com.corradowaver.bot.commands.services.bitcoin.BitcoinService;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
@@ -12,7 +13,7 @@ public class BitcoinHandler {
     event.getChannel().sendTyping().queue();
     MessageEmbed response;
     try {
-      List<BitcoinBody> rates = BitcoinSearchEngine.getRates();
+      List<BitcoinBody> rates = BitcoinService.getRates();
       response = BitcoinMessages.getMessage(event, rates);
     } catch (UnirestException e) {
       e.printStackTrace();

@@ -6,7 +6,9 @@ import com.corradowaver.bot.commands.handlers.PingHandler;
 import com.corradowaver.bot.commands.handlers.PrefixHandler;
 import com.corradowaver.bot.commands.handlers.art.ArtHandler;
 import com.corradowaver.bot.commands.handlers.bitcoin.BitcoinHandler;
-import com.corradowaver.bot.commands.handlers.image.ImageSearchHandler;
+import com.corradowaver.bot.commands.handlers.images.ImageSearchHandler;
+import com.corradowaver.bot.commands.handlers.state.JoinHandler;
+import com.corradowaver.bot.commands.handlers.state.LeaveHandler;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
@@ -27,6 +29,8 @@ public class MessageListener extends ListenerAdapter {
         case PING -> new PingHandler(event);
         case BTC -> new BitcoinHandler(event);
         case ART -> new ArtHandler(event, args);
+        case JOIN -> new JoinHandler(event);
+        case LEAVE -> new LeaveHandler(event);
         default -> {
         }
       }

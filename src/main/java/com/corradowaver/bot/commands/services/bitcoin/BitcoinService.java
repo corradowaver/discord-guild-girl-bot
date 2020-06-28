@@ -1,5 +1,6 @@
-package com.corradowaver.bot.commands.handlers.bitcoin;
+package com.corradowaver.bot.commands.services.bitcoin;
 
+import com.corradowaver.bot.commands.handlers.bitcoin.BitcoinBody;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
@@ -9,7 +10,7 @@ import org.json.JSONObject;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class BitcoinSearchEngine {
+public class BitcoinService {
 
   private static final String URL = "https://blockchain.info/ticker";
 

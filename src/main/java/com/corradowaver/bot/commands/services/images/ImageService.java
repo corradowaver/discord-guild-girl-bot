@@ -1,5 +1,6 @@
-package com.corradowaver.bot.commands.handlers.image;
+package com.corradowaver.bot.commands.services.images;
 
+import com.corradowaver.bot.commands.handlers.images.ImageBody;
 import com.corradowaver.bot.config.PropsManager;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -16,14 +17,13 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class ImageSearchEngine {
+public class ImageService {
 
   // Add your Bing Search V7 endpoint to your environment variables.
-  static String host = "https://api.cognitive.microsoft.com";
   static String path = "/bing/v7.0/images/search";
 
   public static ImageBody searchImages(String searchQuery) throws Exception {
-
+    String host = PropsManager.getProps().getProperty("azure.api.host");
     String subscriptionKey = PropsManager.getProps().getProperty("azure.api.subscription.key");
     // construct URL of search request (endpoint + query string)
     URL url = new URL(host + path + "?q=" + URLEncoder.encode(searchQuery, StandardCharsets.UTF_8));

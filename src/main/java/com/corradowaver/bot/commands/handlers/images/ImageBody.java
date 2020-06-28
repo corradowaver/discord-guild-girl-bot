@@ -1,4 +1,4 @@
-package com.corradowaver.bot.commands.handlers.image;
+package com.corradowaver.bot.commands.handlers.images;
 
 public class ImageBody {
   private String name;

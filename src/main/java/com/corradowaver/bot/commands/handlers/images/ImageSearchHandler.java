@@ -1,6 +1,7 @@
-package com.corradowaver.bot.commands.handlers.image;
+package com.corradowaver.bot.commands.handlers.images;
 
 import com.corradowaver.bot.commands.messages.ImageMessages;
+import com.corradowaver.bot.commands.services.images.ImageService;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
@@ -14,7 +15,7 @@ public class ImageSearchHandler {
     if (args.length >= 2) {
       try {
         String searchQuery = Arrays.stream(args).skip(1).collect(Collectors.joining(" "));
-        response = ImageMessages.getImageMessage(event, ImageSearchEngine.searchImages(searchQuery));
+        response = ImageMessages.getImageMessage(event, ImageService.searchImages(searchQuery));
       } catch (Exception e) {
         e.printStackTrace();
         response = ImageMessages.getErrorMessage(e.getLocalizedMessage());

@@ -1,10 +1,10 @@
-package com.corradowaver.bot.commands.handlers.art;
+package com.corradowaver.bot.commands.services.art;
 
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 
-public class ArtSearchEngine {
+public class ArtService {
   private final static String URL = "http://artii.herokuapp.com/make";
 
   public static String getAsciiArt(String text, String font) throws UnirestException {
