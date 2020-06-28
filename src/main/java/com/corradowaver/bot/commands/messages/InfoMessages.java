@@ -18,7 +18,8 @@ public class InfoMessages {
       "`prefix` - change prefix",
       "`send`   - send picture",
       "`btc`    - current bitcoin rates",
-      "`ping`   - server latency"
+      "`ping`   - server latency",
+      "`art`    - make an ascii art"
   };
 
   private InfoMessages() {

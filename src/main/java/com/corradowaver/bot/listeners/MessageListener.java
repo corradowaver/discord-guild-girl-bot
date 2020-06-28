@@ -4,6 +4,7 @@ import com.corradowaver.bot.GuildGirlBot;
 import com.corradowaver.bot.commands.handlers.InfoHandler;
 import com.corradowaver.bot.commands.handlers.PingHandler;
 import com.corradowaver.bot.commands.handlers.PrefixHandler;
+import com.corradowaver.bot.commands.handlers.art.ArtHandler;
 import com.corradowaver.bot.commands.handlers.bitcoin.BitcoinHandler;
 import com.corradowaver.bot.commands.handlers.image.ImageSearchHandler;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
@@ -25,6 +26,7 @@ public class MessageListener extends ListenerAdapter {
         case SEND -> new ImageSearchHandler(event, args);
         case PING -> new PingHandler(event);
         case BTC -> new BitcoinHandler(event);
+        case ART -> new ArtHandler(event, args);
         default -> {
         }
       }
