@@ -37,7 +37,7 @@ public class MessageListener extends ListenerAdapter {
         case ART -> new ArtHandler(event, preparedArgs);
         case JOIN -> new JoinHandler(event);
         case LEAVE -> new LeaveHandler(event);
-        case PLAY -> new PlayHandler(event, args);
+        case PLAY -> new PlayHandler(event, preparedArgs);
         default -> {
         }
       }
