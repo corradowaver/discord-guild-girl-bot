@@ -6,15 +6,16 @@ import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class ImageSearchHandler {
 
-  public ImageSearchHandler(GuildMessageReceivedEvent event, String[] args) {
+  public ImageSearchHandler(GuildMessageReceivedEvent event, List<String> args) {
     MessageEmbed response;
-    if (args.length >= 2) {
+    if (!args.isEmpty()) {
       try {
-        String searchQuery = Arrays.stream(args).skip(1).collect(Collectors.joining(" "));
+        String searchQuery = String.join(" ", args);
         response = ImageMessages.getImageMessage(event, ImageService.searchImages(searchQuery));
       } catch (Exception e) {
         e.printStackTrace();

@@ -7,6 +7,7 @@ import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 
 /*
@@ -17,11 +18,11 @@ public class ArtHandler {
   private static final String FONT = "doom";
   private static final int STRING_MAX_LENGTH = 62;
 
-  public ArtHandler(GuildMessageReceivedEvent event, String[] args) {
+  public ArtHandler(GuildMessageReceivedEvent event, List<String> args) {
     event.getChannel().sendTyping().queue();
     MessageEmbed response;
-    if (args.length > 1) {
-      String text = Arrays.stream(args).skip(1).collect(Collectors.joining("+"));
+    if (!args.isEmpty()) {
+      String text = String.join("+", args);
       try {
         String art = ArtService.getAsciiArt(text, FONT);
         if (isValidForOutput(art)) {

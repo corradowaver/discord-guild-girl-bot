@@ -1,5 +1,6 @@
 package com.corradowaver.bot.commands.messages;
 
+import com.corradowaver.bot.GuildGirlBot;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 
@@ -16,7 +17,7 @@ public class PrefixMessages {
 
   public static MessageEmbed getSuccessMessage() {
     EmbedBuilder info = new EmbedBuilder();
-    info.setTitle("\uD83D\uDFE2 Prefix changed");
+    info.setTitle("\uD83D\uDFE2 Prefix changed to `" + GuildGirlBot.getPrefix() + "`.");
     info.setColor(Color.GREEN);
     return info.build();
   }
