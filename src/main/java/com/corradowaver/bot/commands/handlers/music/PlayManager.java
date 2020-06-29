@@ -57,7 +57,7 @@ public class PlayManager {
         AudioTrack firstTrack = playlist.getSelectedTrack();
 
         if (firstTrack == null) {
-          firstTrack = playlist.getTracks().get(0);
+          firstTrack = playlist.getTracks().remove(0);
         }
 
         channel.sendMessage("Adding to queue " + firstTrack.getInfo().title + " (first track of playlist " + playlist.getName() + ")").queue();

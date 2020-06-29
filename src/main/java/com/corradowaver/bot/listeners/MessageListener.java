@@ -8,6 +8,8 @@ import com.corradowaver.bot.commands.handlers.art.ArtHandler;
 import com.corradowaver.bot.commands.handlers.bitcoin.BitcoinHandler;
 import com.corradowaver.bot.commands.handlers.images.ImageSearchHandler;
 import com.corradowaver.bot.commands.handlers.music.PlayHandler;
+import com.corradowaver.bot.commands.handlers.music.QueueHandler;
+import com.corradowaver.bot.commands.handlers.music.StopHandler;
 import com.corradowaver.bot.commands.handlers.state.JoinHandler;
 import com.corradowaver.bot.commands.handlers.state.LeaveHandler;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
@@ -15,6 +17,7 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Queue;
 import java.util.stream.Collectors;
 
 import static com.corradowaver.bot.commands.Commands.*;
@@ -38,6 +41,9 @@ public class MessageListener extends ListenerAdapter {
         case JOIN -> new JoinHandler(event);
         case LEAVE -> new LeaveHandler(event);
         case PLAY -> new PlayHandler(event, preparedArgs);
+        case STOP -> new StopHandler(event);
+        case QUEUE -> new QueueHandler(event);
+
         default -> {
         }
       }

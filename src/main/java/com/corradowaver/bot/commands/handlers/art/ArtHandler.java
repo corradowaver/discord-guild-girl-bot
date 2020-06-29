@@ -34,6 +34,7 @@ public class ArtHandler {
         e.printStackTrace();
         response = ArtMessages.getErrorMessage(e.getLocalizedMessage());
       }
+      event.getMessage().delete().queue();
       event.getChannel().sendMessage(response).queue();
     }
   }
